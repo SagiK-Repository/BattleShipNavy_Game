@@ -112,66 +112,84 @@ flowchart LR
 - Git Hub
 - Git Fork
 
-### Git Branch
+### Git repository 구성
+- / : README.md을 배치
+- /Doc : [문서].md를 배치
+- /WhyWay : 프로젝트 폴더
+- /Presentation : PPT 등을 배치
 
-- main : Release 배포, README.md 문서
-- develop
-- ???
-- Test
+### Git Branch 구성
+
+- main : Release 배포, README.md 문서 (public)
+- Develop : 개발 통합 (private)
+- Feature(n) : 기능 구현 (private)
+- Release : 배포용, 모든 개발 결과가 이곳에 저장 (private)
+- Test : Test 공간 (private)
 
 <br>
 
 ## 2-4 프로젝트 구조 설계
 
+### 구조 적용
+- 에디터 스크립트를 통해 적용한다.
+
+### 구조 설계
+- *Editor : 유니티에 포함된 에디터 기능을 확장하기 위한 스크립터 저장
+- *Resorces : 게임 프로그램 외부 파일 로드 폴더
+- *Plugins : 아이폰, 안드로이드등 플랫폼으로 동작할 때 필요한 네이티브 플러그인을 저장
+- Asset
+  - Art
+    - Materials
+    - Models
+    - Textures
+  - Animation
+    - Animators
+    - AnimationClips
+  - Audio
+    - Music
+    - Sound
+  - Code
+    - Scripts
+      - Director
+      - Ator
+      - UI
+      - Common
+      - Tests
+    - Shaders
+  - Docs
+  - Level
+    - Prefabs
+    - Scenes
+    - UI
+- Logs
+- Library
+- Pakages
+- Project Setting : Unity Project 설정 파일 포함된 폴더
+
+### 참조
+
+- [[Unity] 유니티 프로젝트를 구성하기 위한 방법](https://velog.io/@jaehyeoksong0/unity-organizing-your-project)
+- [Projecr Structure (Unity Project 구조 및 모범 사례](https://drehzr.tistory.com/1306)
+- [(Unity) 유니티 프로젝트 폴더구조](https://gnam.tistory.com/8)
+
+<br>
+
+# 2-5 일정 설계
+
+### 6개월 (대략) (4W = 1M)
+- (2W) 개요 작성
+- (1M) 설계
+- (1M) 개발
+- (2W) 추가 설계
+- (2W) 추가 개발
+- (1M) Test 및 개선
+- (2W) 최종 Test
+- (1W) 배포 준비 및 출시
 
 <br><br><br>
 
-# 3. ArtistHelper 기본 구축
+# 3. [] 기본 구축
 
 ## 3-1 기본 구축
 
 ### 프로젝트 구축
-
-- 프로젝트 생성
-  - `WPF 앱(.NET Framework)` 프로젝트 생성 (.Net Framework 4.8)  
-  <img src="https://user-images.githubusercontent.com/66783849/214012083-ec8c1da4-c97c-47a6-b0d8-cf98a56011df.png" width="650">
-- 폴더 구축  
-  - View 폴더 생성
-  - ViewModel 폴더
-  - Model 폴더
-  - Interface 폴더
-  - MainWindow.xaml 삭제  
-  <img src="https://user-images.githubusercontent.com/66783849/214014928-460bdfef-7a63-46c2-9bf1-9810222d728a.png">
-
-<br><br>
-
-## 3-2 DevExpess
-
-- DevExpress 설치
-  - [DevExpress 사이트](https://www.devexpress.com/products/net/controls/wpf/)
-- DevExpress 참조 추가
-  - DevExpress.Data.Desktop
-  - DevExpress.Data
-  - DevExpress.Mvvm
-  - DevExpress.Xpf.Core
-  - DevExpress.Xpf.Docking
-  - DevExpress.Xpf.Layout.Core
-  - DevExpress.Xpf.LayoutControl
-  - DevExpress.Xpf.Ribbon  
-  <img src="https://user-images.githubusercontent.com/66783849/214018272-67d2e82d-8f95-48c2-94c7-6cde4e82a52c.png" width="350">  
-  <img src="https://user-images.githubusercontent.com/66783849/214018323-cf6a1e81-13cd-44ff-917c-2b09f876ebf2.png" width="350">
-
-
-<br><br>
-
-## 3-3 MVVM
-
-
-<br><br>
-
-## 3-4 Test
-
-
-<br><br><br>
-
-# 4. ArtistHelper 개발
